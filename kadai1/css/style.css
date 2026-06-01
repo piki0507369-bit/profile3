@@ -1,0 +1,516 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #000;
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #c26796;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  color: #a8c62f;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/*-------------------------------------------
+Header
+-------------------------------------------*/
+#header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0 20px;
+}
+#header .logo {
+  width: 100%;
+  max-width: 150px;
+}
+#header .logo a {
+  display: block;
+}
+#header .navi .menu {
+  display: flex;
+  align-items: center;
+}
+#header .navi .menu li {
+  font-size: 14px;
+  margin-left: 40px;
+}
+#header .hamburger {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    z-index: 30;
+  }
+  #header .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    transition: all 0.4s;
+  }
+  #header .hamburger span:nth-of-type(1) {
+    top: 16px; 
+  }
+  #header .hamburger span:nth-of-type(2) {
+    top: 25px;
+  }
+  #header .hamburger span:nth-of-type(3) {
+    top: 34px;
+  }
+  #header .navi {
+    width: 80%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -80%;
+    z-index: 20;
+    transition: all 0.6s;
+  }
+  #header .navi.active {
+    right: 0;
+  }
+  #header .navi .menu {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    padding: 60px 0;
+    overflow: auto;
+  }
+  #header .navi .menu li {
+    padding: 10px 0;
+    margin-left: 0;
+  }
+  #header .navi.active{
+    right: 0;
+  }
+  #header .hamburger.active span:nth-of-type(1){
+    top:24px;
+    transform:rotate(-45deg);
+  }
+  #header .hamburger.active span:nth-of-type(2){
+    opacity:0;
+  }
+  #header .hamburger.active span:nth-of-type(3){
+    top:24px;
+    transform:rotate(45deg);
+  }
+.wrapper-1080{
+    max-width: 1120px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+.mainvisual {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.mainvisual img {
+  width: 100%;
+}
+
+/*-------------------------------------------
+Profile
+-------------------------------------------*/
+.profile {
+  padding-top: 130px;
+  padding-bottom: 200px;
+  position: relative;
+}
+
+.profile .img {
+  max-width: 720px;
+}
+
+.profile .img img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.profile .detail {
+  max-width: 600px;
+  background-color: rgba(230, 218, 218, 0.8);
+  padding: 40px;
+  position: absolute;
+  top: 250px;
+  right: 0;
+  border-radius: 30px;
+}
+
+.profile .detail .section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.profile .detail p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/*-------------------------------------------
+Ranking
+-------------------------------------------*/
+#ranking {
+  background-color: #f4eaea;
+  padding-top: 130px;
+  padding-bottom: 0;
+}
+
+#ranking .ranking-title {
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+#ranking .img-group {
+  height: 720px;
+  position: relative;
+}
+
+#ranking .comment {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+#ranking .img1 {
+  max-width: 500px;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  z-index: 30;
+  text-align: center;
+  font-size: 20px;
+}
+
+#ranking .img2 {
+  max-width: 500px;
+  position: absolute;
+  top: 250px;
+  left: 5%;
+  z-index: 20;
+  text-align: center;
+  font-size: 20px;
+}
+
+#ranking .img3 {
+  max-width: 500px;
+  position: absolute;
+  top: 520px;
+  right: 10%;
+  z-index: 10;
+  text-align: center;
+  font-size: 20px;
+}
+
+#ranking img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+#ranking .circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  z-index: 40;
+}
+
+.gold-circle {
+  background: gold;
+  color: #333;
+}
+
+.silver-circle {
+  background: silver;
+  color: #333;
+}
+
+.bronze-circle {
+  background: #cd7f32;
+  color: #333;
+}
+
+/*-------------------------------------------
+Dream Type
+-------------------------------------------*/
+.dream-type {
+  display: flex;
+  align-items: center;
+  padding: 130px 0;
+  background-color: #f4eaea;
+}
+
+.dream-type .text {
+  width: 50%;
+}
+
+.dream-type .text .text-inner {
+  max-width: 520px;
+  padding: 0 60px 0 20px;
+  margin-left: auto;
+}
+
+.dream-type .text .section-title {
+  font-family: "YuMincho", "Yu Mincho", serif;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.dream-type .text .description {
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.dream-type .img {
+  width: 50%;
+}
+
+.dream-type .img img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: left;
+}
+
+/*-------------------------------------------
+page
+-------------------------------------------*/
+.page {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 150px 20px;
+}
+
+.page .page-box {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(68, 40, 40, 0.5);
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.page .page-title {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+
+
+.page .btn {
+  background-color: #fff;
+  color: #bda8a8;
+  display: inline-block;
+  padding: 12px 40px;
+  position: relative;
+  border-radius: 30px;
+}
+
+.page .btn::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #212020;
+  position: absolute;
+  top: 50%;
+  right: -20px;
+}
+
+/*-------------------------------------------
+Footer
+-------------------------------------------*/
+#footer {
+  background-color: #666;
+  padding: 30px 0;
+}
+
+#footer .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footer .logo {
+  max-width: 130px;
+}
+
+#footer .copyright {
+  color: #fff;
+  font-size: 12px;
+}
+
+/*-------------------------------------------
+スマートフォン
+-------------------------------------------*/
+@media screen and (max-width: 767px) {
+  main {
+    padding-top: 60px;
+  }
+
+  /* Header */
+  #header {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  #header .logo {
+    max-width: 120px;
+  }
+  
+
+  /* Profile */
+  .profile {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .profile .detail {
+    position: static;
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 25px;
+  }
+
+  .profile .detail .section-title {
+    font-size: 24px;
+  }
+
+  /* Ranking */
+  #ranking {
+    padding: 80px 20px 0 20px;
+  }
+
+  #ranking .ranking-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  #ranking .img-group {
+    height: auto;
+  }
+
+  #ranking .img1,
+  #ranking .img2,
+  #ranking .img3 {
+    position: static;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  #ranking .circle {
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    top: -10px;
+    right: -10px;
+  }
+
+  /* Dream Type */
+  .dream-type {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  .dream-type .text {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .dream-type .text .text-inner {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .dream-type .text .section-title {
+    font-size: 24px;
+  }
+
+  .dream-type .img {
+    width: 100%;
+  }
+
+  .dream-type .img img {
+    height: auto;
+  }
+
+  /* Dream */
+  .dream {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .dream .dream-box {
+    padding: 40px 20px;
+  }
+
+  .dream .dream-title {
+    font-size: 28px;
+  }
+ 
+
+}
